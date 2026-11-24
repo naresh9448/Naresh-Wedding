@@ -3,7 +3,7 @@
 
 💍 **Happy Marriage | Naresh Reddy ❋ Venkata Sneha**
 
-🌐 **Live Website:** (https://naresh9448.github.io/Naresh-Wedding/)
+🌐 **Live Website:** [(https://naresh9448.github.io/Naresh-Wedding/)](https://naresh9448.github.io/Naresh-Wedding/)
 
 A beautiful, interactive wedding invitation website created to share the celebration details of **Naresh Reddy and Venkata Sneha**. The page combines traditional Indian wedding styling with modern animations and an easy-to-use, mobile-friendly layout.
 
@@ -62,7 +62,7 @@ You can also open the folder in Visual Studio Code and use the Live Server exten
 5. Choose the `main` branch and `/ (root)` folder, then save.
 6. After GitHub Pages finishes deploying, visit:
 
-   [https://naresh9448.github.io/Naresh-Wedding/](https://naresh9448.github.io/Naresh-Wedding/)
+  [ [https://naresh9448.github.io/Naresh-Wedding/](https://naresh9448.github.io/Naresh-Wedding/)](https://naresh9448.github.io/Naresh-Wedding/)
 
 Keep `index.html` and all referenced image, audio, video, font, and other asset files in the paths expected by the HTML. If you replace or move an asset, update its path in `index.html` as well.
 
@@ -77,6 +77,6 @@ Keep `index.html` and all referenced image, audio, video, font, and other asset 
 
 Share the live invitation with family and friends:
 
-**[Naresh Reddy & Venkata Sneha — Wedding Invitation](https://naresh9448.github.io/Naresh-Wedding/)**
+**[Naresh Reddy & Venkata Sneha — Wedding Invitation][(https://naresh9448.github.io/Naresh-Wedding/)](https://naresh9448.github.io/Naresh-Wedding/)**
 
 Made with love for the wedding celebration of **Naresh Reddy & Venkata Sneha**. ❤️
