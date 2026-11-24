@@ -559,7 +559,7 @@ body{overflow-x:hidden}
     "name": "Achampeta Village",
     "city": "Achampeta Village, Racharla Mandal, Markapuram Dist. Andhra Pradesh, India",
     "mapQuery": "Achampeta Village, Andhra Pradesh, India",
-    "mapLink": "https://maps.app.goo.gl/5CfPrEFQ9TD2Xgsw9",
+    "mapLink": "https://maps.app.goo.gl/9RPWKkv4eR7wJPYg8",
     "parkingNote": ""
   },
   "schedule": {
@@ -570,7 +570,7 @@ body{overflow-x:hidden}
         "dateISO": "2026-12-18T11:00:00+05:30",
         "timeDisplayEnglish": "11:00 AM",
         "venueLineEnglish": "Achampeta Village",
-        "locationLink": "https://maps.app.goo.gl/5CfPrEFQ9TD2Xgsw9a"
+        "locationLink": "https://maps.app.goo.gl/9RPWKkv4eR7wJPYg8"
       },
       {
         "titleEnglish": "WEDDING CEREMONY",
@@ -578,7 +578,7 @@ body{overflow-x:hidden}
         "dateISO": "2026-12-19T04:40:00+05:30",
         "timeDisplayEnglish": "04:40 AM",
         "venueLineEnglish": "Achampeta Village",
-        "locationLink": "https://maps.app.goo.gl/5CfPrEFQ9TD2Xgsw9a"
+        "locationLink": "https://maps.app.goo.gl/9RPWKkv4eR7wJPYg8"
       }
     ]
   },
@@ -783,7 +783,7 @@ body{overflow-x:hidden}
 
 </div>
 <p class="english-translation text-ink/60 text-xs" id="ceremonyVenueLineEnglish"></p>
-<a class="mt-2 inline-flex items-center gap-2 text-maroon border border-brass/50 hover:bg-marigold/10 rounded-full px-4 py-2 text-xs font-semibold transition-colors" href="#" id="ceremonyDirectionsLink" rel="noopener" target="_blank">View Location</a>
+<a class="mt-2 inline-flex items-center gap-2 text-maroon border border-brass/50 hover:bg-marigold/10 rounded-full px-4 py-2 text-xs font-semibold transition-colors map-action-link" href="#" id="ceremonyDirectionsLink" rel="noopener" target="_blank">View Location</a>
 </div>
 <a class="mt-5 sm:mt-4 md:mt-6 inline-flex items-center gap-2 bg-maroon hover:bg-maroon-light border border-brass-light/40 transition-all duration-300 hover:shadow-[0_6px_22px_rgba(232,150,31,0.4)] text-cream text-xs md:text-sm px-4 md:px-5 py-2.5 rounded-full" href="#" id="addToCalendarBtn" rel="noopener" target="_blank">
 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
@@ -848,7 +848,7 @@ body{overflow-x:hidden}
 </div>
 </div>
 <div class="relative w-full h-[260px] sm:h-[320px] bg-[#eee4d2]">
-<iframe class="w-full h-full border-0" id="venueMapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="" title="Wedding venue map"></iframe>
+<iframe class="w-full h-full border-0" id="venueMapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="" title="Wedding venue area map preview"></iframe>
 <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 bg-[radial-gradient(circle_at_center,_#fffaf0,_#eadcc5)]" id="venueMapFallback">
 <div class="w-12 h-12 rounded-full bg-maroon/10 flex items-center justify-center text-maroon mb-3">
 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>
@@ -861,8 +861,9 @@ body{overflow-x:hidden}
 <div class="text-center">
 <p class="font-serif text-lg text-maroon" id="venueName"></p>
 <p class="text-sm sm:text-base text-ink/70 max-w-xs sm:max-w-sm mx-auto leading-relaxed" id="venueCity"></p>
+<p class="map-location-note">Tap “Get Directions” to open the exact wedding location shared by the family in Google Maps.</p>
 </div>
-<a class="inline-flex items-center gap-2 whitespace-nowrap bg-maroon hover:bg-maroon-light border border-brass-light/40 transition-all duration-300 hover:shadow-[0_6px_22px_rgba(232,150,31,0.4)] text-cream text-sm px-5 py-2.5 rounded-full" href="#" id="venueDirectionsLink" rel="noopener" target="_blank">
+<a class="inline-flex items-center gap-2 whitespace-nowrap bg-maroon hover:bg-maroon-light border border-brass-light/40 transition-all duration-300 hover:shadow-[0_6px_22px_rgba(232,150,31,0.4)] text-cream text-sm px-5 py-2.5 rounded-full map-action-link" href="#" id="venueDirectionsLink" rel="noopener" target="_blank">
 <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
 <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"></path>
 <circle cx="12" cy="10" r="2.4"></circle>
@@ -948,7 +949,40 @@ body{overflow-x:hidden}
 <style>
     #preloader, #door-scene{ display:none !important; }
     #site{ opacity:1 !important; visibility:visible !important; }
-  </style>
+  
+  /* ---------- Refined Google Maps actions ---------- */
+  .map-action-link{
+    display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+    min-height:46px;padding:.72rem 1.35rem;border-radius:999px;
+    color:#fffaf0;background:linear-gradient(135deg,#7A1E2B 0%,#3A0B12 100%);
+    border:1px solid rgba(240,216,150,.72);
+    box-shadow:0 8px 22px rgba(58,11,18,.18),inset 0 1px 0 rgba(255,255,255,.12);
+    font-weight:700;letter-spacing:.025em;text-decoration:none;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .map-action-link:hover{
+    transform:translateY(-2px);
+    background:linear-gradient(135deg,#9C2C3A 0%,#5A111D 100%);
+    box-shadow:0 12px 28px rgba(58,11,18,.26),0 0 0 3px rgba(232,150,31,.12);
+  }
+  .map-action-link:focus-visible{
+    outline:3px solid #E9B65E;outline-offset:4px;
+  }
+  .map-action-link svg{flex:none}
+  .map-location-note{
+    max-width:32rem;margin:.15rem auto 0;color:rgba(42,24,16,.62);
+    font-size:.78rem;line-height:1.55;text-align:center;
+  }
+  @media(max-width:480px){
+    .map-action-link{width:100%;max-width:290px;min-height:48px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .map-action-link{transition:none}
+    .map-action-link:hover{transform:none}
+  }
+
+</style>
 </noscript>
 <script>
 (function () {
